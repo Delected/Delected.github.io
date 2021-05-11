@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+body {
+    text-align: center;
+    font-family: Avenir,Helvetica,serif;
+    color: #ffff;
+    background-color:rgb(43, 43, 43);
+}
+
+h1 {
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+h2 {
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+
+p {
+    padding-top: 2rem;
+    font-size: 1rem;
+    margin: 0.3rem;
+    font-family: Georgia,Times,Times New Roman,serif;
+}
+
+#content {
+    margin: auto;
+    width: 40%;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+#content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.legend {
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    bottom: 0;
+    margin-top: 10rem;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 1rem 1rem 0rem;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+a {
+    color: red;
+}
+
+#date {
+    padding: 1rem 3rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+#theme {
+    color: rgb(37, 37, 37);
+    background: #ffff;
+    display: inline-block;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+#theme:hover {
+    color: #ffff;
+    background: rgb(37, 37, 37);
+}
+
+/* Code Syntax Highlighting */
+
+pre {
+    color: #ffff;
+    background-color: rgb(37, 37, 37);
+    padding: 1rem;
+}
+
+.curl {
+    color: rgb(155, 25, 155);
+}
+
+.new {
+    color: rgb(158, 33, 33);
+}
+
+.comment {
+    color: rgb(146, 144, 144);
+}
