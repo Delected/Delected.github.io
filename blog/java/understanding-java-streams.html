@@ -3,12 +3,15 @@
     <head>
         <title>Delected | Understanding Java Streams</title>
         <link rel="stylesheet" href="../default.css">
+        <link rel="icon" type="image/png" href="../../favicon.png">
+        <script src="../theme.js"></script>
     </head>
     <body>
-        <!--hello there! welcome to my simple blog page with minimal formatting and no js!-->
+        <!--hello there! welcome to my simple blog page with minimal formatting and no js (except for toggling between dark and light mode)!-->
         <h1>Understanding Java Streams</h1>
+        <p id="date">Published on May 10th, 2021</p>
+        <button id="theme" onclick="toggle()">read this article in dark theme</button>
         <div id="content">
-            <p id="date">Published on May 10th, 2021</p>
             <h2>What is a Java Stream?</h2>
             <p>
                 <strong>** NOTE: I am talking about Java 8 Stream API, not java.io</strong><br><br>
@@ -43,18 +46,18 @@
             </p><br>
             
             <pre>
-                List&lt;Pet&gt;</span><span> pets = </span><span class="new">new</span><span> ArrayList&lt;Pet&gt;()<span class="curl"> {{</span>
-                    add(<span class="new">new</span> Dog());
-                    add(<span class="new">new</span> Cat());
-                    add(<span class="new">new</span> Pet());
-                    add(<span class="new">new</span> Dog());
-                <span class="curl">}}</span>;
+List&lt;Pet&gt;</span><span> pets = </span><span class="new">new</span><span> ArrayList&lt;Pet&gt;()<span class="curl"> {{</span>
+    add(<span class="new">new</span> Dog());
+    add(<span class="new">new</span> Cat());
+    add(<span class="new">new</span> Pet());
+    add(<span class="new">new</span> Dog());
+<span class="curl">}}</span>;
 
-                long dogCount = pets.stream()
-                    .filter(pet -> pet <span class="new">instanceof</span> Dog)
-                    .count();
-                
-                System.out.println(dogCount); <span class="comment">// prints 2</span>
+long dogCount = pets.stream()
+    .filter(pet -> pet <span class="new">instanceof</span> Dog)
+    .count();
+
+System.out.println(dogCount); <span class="comment">// prints 2</span>
             </pre><br>
 
             <p>
