@@ -24,6 +24,7 @@ h2 {
 
 
 p {
+    padding-top: 2rem;
     font-size: 1rem;
     margin: 0.3rem;
     font-family: Georgia,Times,Times New Roman,serif;
@@ -31,7 +32,7 @@ p {
 
 #content {
     margin: auto;
-    width: 40rem;
+    width: 40%;
     overflow-wrap: break-word;
     text-align: left;
 }
@@ -40,13 +41,12 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 32em;
+    width: 80%;
 }
 
 .legend {
     text-align: center;
     font-weight: bold;
-    padding-bottom: 2.5rem;
 }
 
 footer {
@@ -57,8 +57,9 @@ footer {
     margin-top: 10rem;
     background-color: rgb(37, 37, 37);
     color: white;
-    padding: 2rem 2rem 0rem;
+    padding: 1rem 1rem 0rem;
     text-align: left;
+    word-wrap: break-word;
 }
 
 a {
@@ -69,4 +70,25 @@ a {
     padding-top: 1rem;
     text-align: left;
     text-decoration: underline;
+
+}
+
+s
+/* Code Syntax Highlighting */
+
+pre {
+    color: #0000;
+    background-color: rgb(202, 202, 202);
+}
+
+.curl {
+    color: rgb(155, 25, 155);
+}
+
+.new {
+    color: rgb(158, 33, 33);
+}
+
+.comment {
+    color: rgb(146, 144, 144);
 }
