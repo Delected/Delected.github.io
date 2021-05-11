@@ -1,7 +1,7 @@
 const link = document.getElementsByTagName('link')[0]
 
 function toggle() {
-    link.getAttribute('href') =='dark.css' ? setLight() : setDark() 
+    link.getAttribute('href') =='../dark.css' ? setLight() : setDark() 
 }
 
 function setLight() {
