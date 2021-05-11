@@ -2,16 +2,18 @@
 <html lang="en">
     <head>
         <title>Delected | Understanding Java Streams</title>
-        <link rel="stylesheet" href="../default.css">
+        <link rel="stylesheet" href="default.css">
     </head>
     <body>
+        <!--hello there! welcome to my simple blog page with minimal formatting and no js!-->
         <h1>Understanding Java Streams</h1>
         <div id="content">
             <p id="date">Published on May 10th, 2021</p>
             <h2>What is a Java Stream?</h2>
             <p>
                 <strong>** NOTE: I am talking about Java 8 Stream API, not java.io</strong><br><br>
-                A stream is simply an iteration. Items pass through a stream in hopes of being manipulated in different ways.
+                A stream is simply an iteration. Items pass through a stream in hopes of being 
+                manipulated in different ways.
             </p>
             <h2>What is a visual way to think of a Stream?</h2>
 
@@ -21,19 +23,63 @@
                 and I was too at a point in time. Hopefully this helps you understand streams
                 with ease.
             </p>
-            <img src="../../resources/2pipes.jpeg" alt="Picture of 2 pipes">
+            <img src="2pipes.jpeg" alt="Picture of 2 pipes">
             <p class="legend">Streams are just pipelines. Let's make it simple.</p>
             <p>
-                Streams really don't have to be hard. I like to think of streams like a pipeline,
+                Streams really don't have to be hard. I like to think of streams like a <strong>pipeline</strong>,
                 all the items in the stream loop through this pipe until a terminal operator is called.
-                Another way of thinking of this terminal operator is the exit of pipe contents into a 
-                body of water.
+                Another way of thinking of this terminal operator is the <strong>exit of pipe contents</strong> 
+                into a body of water.
             </p>
+            <h2>What about reduction?</h2>
+            <p>
+                So, what about <strong>filtering</strong>?
+                Filtering a stream reminds me of
+                actual water filtering. For example, let's
+                say we wanted to <i>filter</i> a list of pets to
+                only ones with a type of dog. The code would
+                look something like the following: (this example 
+                does not contain presence checks, but we will get to that later)
+            </p><br>
+            
+            <pre>
+                List&lt;Pet&gt;</span><span> pets = </span><span class="new">new</span><span> ArrayList&lt;Pet&gt;()<span class="curl"> {{</span>
+                    add(<span class="new">new</span> Dog());
+                    add(<span class="new">new</span> Cat());
+                    add(<span class="new">new</span> Pet());
+                    add(<span class="new">new</span> Dog());
+                <span class="curl">}}</span>;
+
+                long dogCount = pets.stream()
+                    .filter(pet -> pet <span class="new">instanceof</span> Dog)
+                    .count();
+                
+                System.out.println(dogCount); <span class="comment">// prints 2</span>
+            </pre><br>
+
+            <p>
+                So, this reminds me of one of the options to filter water (thanks, science class)! 
+                <strong>Reverse osmosis</strong> acts like a filter which <strong>only</strong> 
+                lets water particles pass through a membrane. We are doing the same thing, but instead 
+                of filtering water, we are filtering dogs.
+            </p>
+            <p>
+                If you do not understand this science concept well enough, it is a good
+                idea to think of strean filtering like a coffee filter, or a metal grid instead.
+            </p>
+            <p>
+                Let's take a look at the <i>reduce</i> operator in streams. This operator repeatedly 
+                combines all elements in a stream until there is only one left. <i>sum</i>, <i>collect</i>, 
+                <i>count</i>, etc, are all forms of reduce <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Reduction">(more info here)</a>
+            </p>
+            
+            <h2>And mapping?</h2>
+            <br><br><br>
         </div>
         <footer>
             Delected©. This blog is non-profit, if there is a photo used that infringes 
-            copyright, please email me if you would like it taken down.<br>
-            Please do not repost my content. Credit my posts where used. Thanks :D
+            copyright, please email me if you would like it taken down. Please do not 
+            repost my content. Credit my posts where used. Thanks :D
             <a href="https://github.com/Delected/">(Here's My GitHub Page)</a>
         </footer>
     </body>
