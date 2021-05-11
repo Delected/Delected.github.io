@@ -7,11 +7,11 @@ function toggle() {
 function setLight() {
     document.getElementById('theme').innerHTML = 
         'read this article in dark theme'
-    link.setAttribute('href', 'default.css')
+    link.setAttribute('href', '../default.css')
 }
 
 function setDark() {
     document.getElementById('theme').innerHTML = 
         'read this article in light theme'
-    link.setAttribute('href', 'dark.css')
+    link.setAttribute('href', '../dark.css')
 }
